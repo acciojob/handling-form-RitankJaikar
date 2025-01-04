@@ -1,11 +1,17 @@
 
-import React from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
 
 const App = () => {
+  const [input, setInput] = useState("");
+
+  console.log(input);
+
   return (
     <div>
-        {/* Do not remove the main div */}
+        <form>
+          <input type="text" value={input} onChange={e => setInput(e.target.value) } />
+        </form>
     </div>
   )
 }
